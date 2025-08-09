@@ -24,3 +24,30 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* --- MediFlow theming (minimal white) --- */
+:root {
+  /* soft white gradient */
+  --mf-bg: radial-gradient(900px 500px at 25% 15%, rgba(0,0,0,0.04), transparent 45%),
+           linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%);
+}
+
+/* one source of truth for body background */
+body {
+  background: var(--mf-bg);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* soft, modern card */
+.mf-card {
+  @apply rounded-2xl border border-slate-200 bg-white shadow-[0_4px_24px_rgba(0,0,0,0.04)];
+}
+
+/* subtle dark slate gradient text */
+.mf-gradient-text {
+  background: linear-gradient(90deg, #0f172a, #334155);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
